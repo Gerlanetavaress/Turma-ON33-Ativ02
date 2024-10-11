@@ -1,0 +1,30 @@
+import random
+
+def gerar_nome_divertido():
+    # Categorias de palavras
+    adjetivos = ["Alegre", "Triste", "Curioso", "Divertido", "Estranho"]
+    substantivos = ["Leão", "Cachorro", "Carro", "Pato", "Sorvete"]
+    verbos = ["Corre", "Salta", "Danifica", "Brinca", "Grita"]
+    
+    # Selecionando uma palavra aleatória de cada categoria
+    adjetivo = random.choice(adjetivos)
+    substantivo = random.choice(substantivos)
+    verbo = random.choice(verbos)
+    
+    nome_divertido = f"{adjetivo} {substantivo} que {verbo}"
+    
+    return nome_divertido
+
+def main():
+    print("Gerador de Nomes Divertidos!")
+    while True:
+        nome = gerar_nome_divertido()
+        print(nome)
+        
+        # Pergunta se o usuário deseja gerar outro nome
+        continuar = input("Deseja gerar outro nome? (s/n): ").strip().lower()
+        if continuar != 's':
+            break
+
+if _name_ == "_main_":
+    main()
